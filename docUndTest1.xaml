@@ -1,0 +1,286 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="docUndTest1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1196,3372" sap2010:WorkflowViewState.IdRef="docUndTest1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p7="http://schemas.uipath.com/workflow/activities/intelligentocr/training" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="docUndTest1" sap:VirtualizedContainerService.HintSize="1019,3167" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p8:DocumentTaxonomy" Name="taxo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="977,3075" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Directory.GetFiles(&quot;C:\Users\user\Documents\UiPath\new approach\pdfs&quot;)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="941,2941" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="p3:Document" Name="DOM1" />
+              <Variable x:TypeArguments="x:String" Name="bin_text" />
+              <Variable x:TypeArguments="p6:ClassificationResult[]" Name="classification1" />
+              <Variable x:TypeArguments="p6:ExtractionResult" Name="dataextraction1" />
+              <Variable x:TypeArguments="x:String" Default="GcQUoPE2A+2CZvUwRKLMJyN9tS0mzh4PgOqbF7B+VBUwKCvDX+Utglp9IbD+CPt7HBp7lMq1wVQUcRRxN9GP3A==" Name="key" />
+              <Variable x:TypeArguments="p6:ClassificationResult[]" Name="classification" />
+              <Variable x:TypeArguments="p3:Document" Name="DOM" />
+              <Variable x:TypeArguments="p6:ExtractionResult" Name="validated_extr2" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="899,103" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[taxo]" />
+            <p:DigitizeDocument DegreeOfParallelism="-1" DisplayName="Digitize Document" DocumentObjectModel="[DOM]" DocumentPath="[item.ToString]" DocumentText="[bin_text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="899,293" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+              <p:DigitizeDocument.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <uoa:OmniPageOCR Language="{x:Null}" Output="{x:Null}" Text="{x:Null}" BundleType="Basic" ComputeSkewAngle="False" DisplayName="OmniPage OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,22" sap2010:WorkflowViewState.IdRef="OmniPageOCR_1" Image="[Image]" Profile="Scan" Scale="2" />
+                </ActivityFunc>
+              </p:DigitizeDocument.OCREngine>
+            </p:DigitizeDocument>
+            <p1:ClassifyDocumentScope ClassificationResults="[classification1]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[item.ToString]" DocumentText="[bin_text]" sap:VirtualizedContainerService.HintSize="899,434" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxo]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI98a2fb36478e4937b5d07e87190f6169&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NjtaAmazonScans.Invoice.Tolls&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false},&quot;NjtaAmazonScans.Invoice.njta&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.njta&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI98a2fb36478e4937b5d07e87190f6169&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{}}">
+              <p1:ClassifyDocumentScope.Classifiers>
+                <p1:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="234,113" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_2" LearningFilePath="DocumentProcessing\keywordlearning1.json" PersistenceId="UI98a2fb36478e4937b5d07e87190f6169">
+                  <p1:KeywordBasedClassifier.ClassifierResult>
+                    <OutArgument x:TypeArguments="p2:ClassifierResult">
+                      <DelegateArgumentReference x:TypeArguments="p2:ClassifierResult">
+                        <DelegateOutArgument x:TypeArguments="p2:ClassifierResult" Name="ClassificationResult" />
+                      </DelegateArgumentReference>
+                    </OutArgument>
+                  </p1:KeywordBasedClassifier.ClassifierResult>
+                  <p1:KeywordBasedClassifier.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p3:Document">
+                      <DelegateArgumentValue x:TypeArguments="p3:Document">
+                        <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentObjectModel>
+                  <p1:KeywordBasedClassifier.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentPath>
+                  <p1:KeywordBasedClassifier.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentText>
+                  <p1:KeywordBasedClassifier.DocumentTypes>
+                    <InArgument x:TypeArguments="p2:ClassifierDocumentType[]">
+                      <DelegateArgumentValue x:TypeArguments="p2:ClassifierDocumentType[]">
+                        <DelegateInArgument x:TypeArguments="p2:ClassifierDocumentType[]" Name="DocumentTypes" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentTypes>
+                </p1:KeywordBasedClassifier>
+              </p1:ClassifyDocumentScope.Classifiers>
+            </p1:ClassifyDocumentScope>
+            <If Condition="[classification1.Any]" sap:VirtualizedContainerService.HintSize="899,1899" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="520,1751" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="p6:ExtractionResult" Name="validated_extr1" />
+                    <Variable x:TypeArguments="sd1:DataSet" Name="confirmed_data1" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p4:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[classification1(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM1]" DocumentPath="[item.ToString]" DocumentText="[bin_text]" ExtractionResult="[dataextraction1]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478,482" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[taxo]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIce3a6a5f0e984efba49e40eb35de036f&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NjtaAmazonScans.Invoice.Tolls&quot;:{&quot;FieldMappings&quot;:{&quot;NjtaAmazonScans.Invoice.Tolls.ViolationNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.ViolationNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.LP&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.LP&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.Interchange&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.Interchange&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.lane&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.lane&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.tolldate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.tolldate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.tolltime&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.tolltime&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.tolldue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.tolldue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.adminfee&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.adminfee&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Tolls.duedate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls.duedate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;NjtaAmazonScans.Invoice.Njta_&quot;:{&quot;FieldMappings&quot;:{&quot;NjtaAmazonScans.Invoice.Njta_.transanctions&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.violation&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.violation&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.lp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.lp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.inter&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.inter&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.lane&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.lane&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.date_&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.date_&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.time&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.time&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.tolldue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.tolldue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.adminfee&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.adminfee&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;NjtaAmazonScans.Invoice.njta&quot;:{&quot;FieldMappings&quot;:{&quot;NjtaAmazonScans.Invoice.njta.tolls&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.violation&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.violation&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.lp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.lp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.interchange&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.interchange&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.lane&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.lane&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.date_&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.date_&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.time_&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.time_&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.due&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.due&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.adminFee&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.adminFee&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NjtaAmazonScans.Invoice.njta.tolls.dueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.dueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIce3a6a5f0e984efba49e40eb35de036f&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UIce3a6a5f0e984efba49e40eb35de036f&quot;:[]}}">
+                    <p4:DataExtractionScope.Extractors>
+                      <p4:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="[key]" DisplayName="Form Extractor" Endpoint="https://formextractor.uipath.com/" sap:VirtualizedContainerService.HintSize="234,161" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UIce3a6a5f0e984efba49e40eb35de036f" SerializedSettings="{}{}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_&quot;,&quot;FormId&quot;:&quot;3dbd6310&quot;,&quot;FormName&quot;:&quot;temp1&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,615.0,794.0],&quot;SkewAngle&quot;:0.0753,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;New&quot;,&quot;Box&quot;:[12.1807,165.3519,38.9005,14.9479]},{&quot;Text&quot;:&quot;Jersey&quot;,&quot;Box&quot;:[12.1009,209.9434,58.576,18.8018]},{&quot;Text&quot;:&quot;Turnpike&quot;,&quot;Box&quot;:[11.9909,274.4401,76.7989,19.065]},{&quot;Text&quot;:&quot;Authority&quot;,&quot;Box&quot;:[11.8817,357.1593,78.9569,19.0651]},{&quot;Text&quot;:&quot;ADVISORY&quot;,&quot;Box&quot;:[77.5182,53.2335,57.5786,8.7261]}],&quot;Fields&quot;:[],&quot;Tables&quot;:[{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions&quot;,&quot;Headers&quot;:[{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.violation&quot;,&quot;Box&quot;:[416.3385,33.5273,82.0667,11.5094]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.lp&quot;,&quot;Box&quot;:[415.8381,118.5964,69.5566,13.511]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.inter&quot;,&quot;Box&quot;:[416.3385,190.655,154.1253,12.0098]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.lane&quot;,&quot;Box&quot;:[417.3393,347.2823,38.5313,11.5094]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.date_&quot;,&quot;Box&quot;:[416.8389,388.8161,39.0317,11.009]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.time&quot;,&quot;Box&quot;:[416.3385,428.8487,40.0325,12.5102]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.tolldue&quot;,&quot;Box&quot;:[416.3385,470.8828,39.5321,12.5102]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_.transanctions.adminfee&quot;,&quot;Box&quot;:[416.5034,513.631,54.7138,12.7241]}],&quot;Cells&quot;:[{&quot;Row&quot;:0,&quot;Column&quot;:0,&quot;Box&quot;:[430.9241,34.7793,81.0103,8.0586]},{&quot;Row&quot;:0,&quot;Column&quot;:1,&quot;Box&quot;:[430.5,119.1828,68.7103,8.0586]},{&quot;Row&quot;:0,&quot;Column&quot;:2,&quot;Box&quot;:[430.0759,190.8621,153.1138,8.4828]},{&quot;Row&quot;:0,&quot;Column&quot;:3,&quot;Box&quot;:[431.3483,345.6724,41.1414,8.0586]},{&quot;Row&quot;:0,&quot;Column&quot;:4,&quot;Box&quot;:[428.8034,388.5103,39.4448,11.0276]},{&quot;Row&quot;:0,&quot;Column&quot;:5,&quot;Box&quot;:[430.9241,430.5,39.869,8.9069]},{&quot;Row&quot;:0,&quot;Column&quot;:6,&quot;Box&quot;:[430.5,471.2172,40.2931,8.0586]},{&quot;Row&quot;:0,&quot;Column&quot;:7,&quot;Box&quot;:[429.6517,512.3586,55.1379,8.9069]},{&quot;Row&quot;:1,&quot;Column&quot;:0,&quot;Box&quot;:[441.1034,34.3552,81.8586,7.2103]},{&quot;Row&quot;:1,&quot;Column&quot;:1,&quot;Box&quot;:[441.1034,118.7586,69.1345,7.2103]},{&quot;Row&quot;:1,&quot;Column&quot;:2,&quot;Box&quot;:[440.6793,190.8621,153.9621,8.9069]},{&quot;Row&quot;:1,&quot;Column&quot;:3,&quot;Box&quot;:[440.6793,346.9448,39.0207,9.331]},{&quot;Row&quot;:1,&quot;Column&quot;:4,&quot;Box&quot;:[441.1034,388.5103,38.5966,6.7862]},{&quot;Row&quot;:1,&quot;Column&quot;:5,&quot;Box&quot;:[440.6793,430.0759,39.0207,8.0586]},{&quot;Row&quot;:1,&quot;Column&quot;:6,&quot;Box&quot;:[440.2552,471.2172,40.7172,9.7552]},{&quot;Row&quot;:1,&quot;Column&quot;:7,&quot;Box&quot;:[439.831,512.7828,54.7138,8.9069]},{&quot;Row&quot;:2,&quot;Column&quot;:0,&quot;Box&quot;:[451.2828,34.7793,81.4345,8.4828]},{&quot;Row&quot;:2,&quot;Column&quot;:1,&quot;Box&quot;:[450.0103,119.1828,68.2862,8.9069]},{&quot;Row&quot;:2,&quot;Column&quot;:2,&quot;Box&quot;:[449.5862,189.5897,155.2345,9.331]},{&quot;Row&quot;:2,&quot;Column&quot;:3,&quot;Box&quot;:[449.5862,346.9448,39.4448,10.1793]},{&quot;Row&quot;:2,&quot;Column&quot;:4,&quot;Box&quot;:[451.2828,387.2379,40.7172,7.6345]},{&quot;Row&quot;:2,&quot;Column&quot;:5,&quot;Box&quot;:[449.5862,430.0759,39.869,10.1793]},{&quot;Row&quot;:2,&quot;Column&quot;:6,&quot;Box&quot;:[450.8586,471.6414,40.2931,8.4828]},{&quot;Row&quot;:2,&quot;Column&quot;:7,&quot;Box&quot;:[450.8586,512.7828,54.2897,9.7552]},{&quot;Row&quot;:3,&quot;Column&quot;:0,&quot;Box&quot;:[459.7655,34.7793,83.131,9.7552]},{&quot;Row&quot;:3,&quot;Column&quot;:1,&quot;Box&quot;:[460.6138,119.6069,68.2862,9.331]},{&quot;Row&quot;:3,&quot;Column&quot;:2,&quot;Box&quot;:[461.0379,190.0138,153.5379,8.9069]},{&quot;Row&quot;:3,&quot;Column&quot;:3,&quot;Box&quot;:[460.6138,346.5207,39.869,8.9069]},{&quot;Row&quot;:3,&quot;Column&quot;:4,&quot;Box&quot;:[460.6138,388.5103,39.4448,8.0586]},{&quot;Row&quot;:3,&quot;Column&quot;:5,&quot;Box&quot;:[461.0379,430.0759,38.5966,8.0586]},{&quot;Row&quot;:3,&quot;Column&quot;:6,&quot;Box&quot;:[460.6138,471.6414,39.0207,8.9069]},{&quot;Row&quot;:3,&quot;Column&quot;:7,&quot;Box&quot;:[460.1897,514.0552,55.5621,9.331]},{&quot;Row&quot;:4,&quot;Column&quot;:0,&quot;Box&quot;:[470.7931,34.3552,81.4345,8.4828]},{&quot;Row&quot;:4,&quot;Column&quot;:1,&quot;Box&quot;:[471.2172,119.1828,68.7103,9.7552]},{&quot;Row&quot;:4,&quot;Column&quot;:2,&quot;Box&quot;:[470.7931,190.4379,153.5379,10.6034]},{&quot;Row&quot;:4,&quot;Column&quot;:3,&quot;Box&quot;:[470.7931,346.9448,39.869,8.4828]},{&quot;Row&quot;:4,&quot;Column&quot;:4,&quot;Box&quot;:[469.5207,388.0862,39.869,9.7552]},{&quot;Row&quot;:4,&quot;Column&quot;:5,&quot;Box&quot;:[470.7931,430.5,37.7483,8.0586]},{&quot;Row&quot;:4,&quot;Column&quot;:6,&quot;Box&quot;:[470.7931,472.0655,40.2931,8.0586]},{&quot;Row&quot;:4,&quot;Column&quot;:7,&quot;Box&quot;:[469.0966,513.2069,56.4103,11.4517]}]}]}]},{&quot;DocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.njta&quot;,&quot;FormId&quot;:&quot;f0e814bb&quot;,&quot;FormName&quot;:&quot;temp2&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,615.0,794.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;New&quot;,&quot;Box&quot;:[12.4662,165.9181,37.883,14.3841]},{&quot;Text&quot;:&quot;Jersey&quot;,&quot;Box&quot;:[12.4662,210.5146,57.5439,18.2198]},{&quot;Text&quot;:&quot;Authority&quot;,&quot;Box&quot;:[12.2264,357.4912,78.4035,18.2199]},{&quot;Text&quot;:&quot;FINAL&quot;,&quot;Box&quot;:[33.3231,197.3275,28.0526,7.192]},{&quot;Text&quot;:&quot;NOTICE&quot;,&quot;Box&quot;:[33.3231,229.4561,36.4445,7.192]},{&quot;Text&quot;:&quot;OF&quot;,&quot;Box&quot;:[33.0833,269.7368,12.7076,7.4318]},{&quot;Text&quot;:&quot;ENFORCEMENT&quot;,&quot;Box&quot;:[33.3231,286.5205,76.0059,7.192]},{&quot;Text&quot;:&quot;ACTION&quot;,&quot;Box&quot;:[33.0833,365.8831,37.1637,7.4318]},{&quot;Text&quot;:&quot;ADVISORY&quot;,&quot;Box&quot;:[77.9136,53.7076,56.8246,8.151]},{&quot;Text&quot;:&quot;AND&quot;,&quot;Box&quot;:[77.9136,114.1287,22.7777,7.9112]},{&quot;Text&quot;:&quot;PAYMENT&quot;,&quot;Box&quot;:[77.6739,141.462,52.5088,8.1509]},{&quot;Text&quot;:&quot;REQUEST&quot;,&quot;Box&quot;:[77.6739,198.2866,51.7895,8.3907]},{&quot;Text&quot;:&quot;VIOLATION#&quot;,&quot;Box&quot;:[92.2977,53.7076,65.4562,8.3907]},{&quot;Text&quot;:&quot;NOTICE&quot;,&quot;Box&quot;:[78.6329,441.8889,32.8479,6.4728]},{&quot;Text&quot;:&quot;DATE:&quot;,&quot;Box&quot;:[78.3931,478.5731,28.0526,6.4729]}],&quot;Fields&quot;:[],&quot;Tables&quot;:[{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls&quot;,&quot;Headers&quot;:[{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.violation&quot;,&quot;Box&quot;:[416.8389,34.5281,81.5663,13.0106]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.lp&quot;,&quot;Box&quot;:[415.8381,118.096,70.057,13.511]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.interchange&quot;,&quot;Box&quot;:[416.3385,189.6542,154.1253,12.0098]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.lane&quot;,&quot;Box&quot;:[416.3385,346.7819,38.5313,11.5094]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.date_&quot;,&quot;Box&quot;:[415.8381,386.8145,41.5338,13.0106]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.time_&quot;,&quot;Box&quot;:[416.8389,429.8495,39.0317,12.0098]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.due&quot;,&quot;Box&quot;:[416.9276,471.6414,39.0207,12.3]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.adminFee&quot;,&quot;Box&quot;:[414.8069,512.7828,54.7138,13.9966]},{&quot;FieldId&quot;:&quot;NjtaAmazonScans.Invoice.njta.tolls.dueDate&quot;,&quot;Box&quot;:[626.4517,413.1103,111.1241,18.6621]}],&quot;Cells&quot;:[{&quot;Row&quot;:0,&quot;Column&quot;:0,&quot;Box&quot;:[430.0759,34.7793,81.0103,8.9069]},{&quot;Row&quot;:0,&quot;Column&quot;:1,&quot;Box&quot;:[431.3483,120.031,68.2862,7.6345]},{&quot;Row&quot;:0,&quot;Column&quot;:2,&quot;Box&quot;:[430.5,190.0138,154.3862,8.9069]},{&quot;Row&quot;:0,&quot;Column&quot;:3,&quot;Box&quot;:[429.6517,346.0966,39.869,9.331]},{&quot;Row&quot;:0,&quot;Column&quot;:4,&quot;Box&quot;:[430.0759,388.5103,39.4448,8.9069]},{&quot;Row&quot;:0,&quot;Column&quot;:5,&quot;Box&quot;:[429.6517,430.0759,39.4448,9.331]},{&quot;Row&quot;:0,&quot;Column&quot;:6,&quot;Box&quot;:[430.9241,470.7931,39.869,7.6345]},{&quot;Row&quot;:0,&quot;Column&quot;:7,&quot;Box&quot;:[429.6517,512.7828,55.1379,9.331]},{&quot;Row&quot;:0,&quot;Column&quot;:8,&quot;Box&quot;:[627.3,414.3828,113.669,17.8138]},{&quot;Row&quot;:1,&quot;Column&quot;:0,&quot;Box&quot;:[440.2552,33.5069,82.7069,8.9069]},{&quot;Row&quot;:1,&quot;Column&quot;:1,&quot;Box&quot;:[440.6793,117.9103,69.5586,9.7552]},{&quot;Row&quot;:1,&quot;Column&quot;:2,&quot;Box&quot;:[440.2552,190.0138,155.6586,10.1793]},{&quot;Row&quot;:1,&quot;Column&quot;:3,&quot;Box&quot;:[441.1034,346.9448,39.4448,8.9069]},{&quot;Row&quot;:1,&quot;Column&quot;:4,&quot;Box&quot;:[440.2552,387.6621,39.869,8.4828]},{&quot;Row&quot;:1,&quot;Column&quot;:5,&quot;Box&quot;:[438.9828,429.6517,39.869,10.6034]},{&quot;Row&quot;:1,&quot;Column&quot;:6,&quot;Box&quot;:[439.831,471.6414,40.7172,8.9069]},{&quot;Row&quot;:1,&quot;Column&quot;:7,&quot;Box&quot;:[440.2552,513.631,53.8655,9.331]},{&quot;Row&quot;:1,&quot;Column&quot;:8,&quot;Box&quot;:[626.0276,412.2621,123.8483,19.0862]},{&quot;Row&quot;:2,&quot;Column&quot;:0,&quot;Box&quot;:[450.4345,34.3552,82.2828,8.9069]},{&quot;Row&quot;:2,&quot;Column&quot;:1,&quot;Box&quot;:[449.5862,118.7586,68.7103,10.6034]},{&quot;Row&quot;:2,&quot;Column&quot;:2,&quot;Box&quot;:[450.0103,191.2862,153.9621,10.6034]},{&quot;Row&quot;:2,&quot;Column&quot;:3,&quot;Box&quot;:[450.8586,346.9448,39.0207,8.4828]},{&quot;Row&quot;:2,&quot;Column&quot;:4,&quot;Box&quot;:[450.0103,388.9345,39.0207,8.9069]},{&quot;Row&quot;:2,&quot;Column&quot;:5,&quot;Box&quot;:[450.0103,429.6517,39.4448,9.7552]},{&quot;Row&quot;:2,&quot;Column&quot;:6,&quot;Box&quot;:[450.8586,472.0655,39.869,7.6345]},{&quot;Row&quot;:2,&quot;Column&quot;:7,&quot;Box&quot;:[450.8586,514.0552,54.7138,8.0586]},{&quot;Row&quot;:2,&quot;Column&quot;:8,&quot;Box&quot;:[625.1793,410.9897,126.3931,22.0552]},{&quot;Row&quot;:3,&quot;Column&quot;:0,&quot;Box&quot;:[461.4621,34.3552,82.2828,8.4828]},{&quot;Row&quot;:3,&quot;Column&quot;:1,&quot;Box&quot;:[460.6138,117.4862,72.1034,9.331]},{&quot;Row&quot;:3,&quot;Column&quot;:2,&quot;Box&quot;:[461.0379,190.0138,153.9621,8.4828]},{&quot;Row&quot;:3,&quot;Column&quot;:3,&quot;Box&quot;:[461.0379,346.5207,40.7172,8.9069]},{&quot;Row&quot;:3,&quot;Column&quot;:4,&quot;Box&quot;:[461.4621,390.2069,36.4759,8.4828]},{&quot;Row&quot;:3,&quot;Column&quot;:5,&quot;Box&quot;:[461.4621,429.6517,41.1414,8.9069]},{&quot;Row&quot;:3,&quot;Column&quot;:6,&quot;Box&quot;:[460.1897,471.2172,39.4448,9.7552]},{&quot;Row&quot;:3,&quot;Column&quot;:7,&quot;Box&quot;:[460.6138,513.631,55.5621,8.9069]},{&quot;Row&quot;:3,&quot;Column&quot;:8,&quot;Box&quot;:[626.0276,410.1414,129.7862,19.9345]},{&quot;Row&quot;:4,&quot;Column&quot;:0,&quot;Box&quot;:[471.6414,34.3552,81.8586,8.9069]},{&quot;Row&quot;:4,&quot;Column&quot;:1,&quot;Box&quot;:[470.7931,117.4862,71.6793,9.331]},{&quot;Row&quot;:4,&quot;Column&quot;:2,&quot;Box&quot;:[469.9448,189.5897,155.2345,10.1793]},{&quot;Row&quot;:4,&quot;Column&quot;:3,&quot;Box&quot;:[471.2172,346.5207,41.9897,8.9069]},{&quot;Row&quot;:4,&quot;Column&quot;:4,&quot;Box&quot;:[471.2172,388.5103,39.869,8.4828]},{&quot;Row&quot;:4,&quot;Column&quot;:5,&quot;Box&quot;:[469.9448,429.6517,39.4448,9.7552]},{&quot;Row&quot;:4,&quot;Column&quot;:6,&quot;Box&quot;:[471.2172,471.6414,40.7172,7.6345]},{&quot;Row&quot;:4,&quot;Column&quot;:7,&quot;Box&quot;:[470.369,513.2069,54.2897,8.9069]},{&quot;Row&quot;:4,&quot;Column&quot;:8,&quot;Box&quot;:[626.0276,410.9897,131.9069,20.7828]}]}]}]}]">
+                        <p4:FormExtractor.DocumentBounds>
+                          <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                            <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                              <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p4:FormExtractor.DocumentBounds>
+                        <p4:FormExtractor.DocumentObjectModel>
+                          <InArgument x:TypeArguments="p3:Document">
+                            <DelegateArgumentValue x:TypeArguments="p3:Document">
+                              <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p4:FormExtractor.DocumentObjectModel>
+                        <p4:FormExtractor.DocumentPath>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p4:FormExtractor.DocumentPath>
+                        <p4:FormExtractor.DocumentText>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p4:FormExtractor.DocumentText>
+                        <p4:FormExtractor.ExtractorDocumentType>
+                          <InArgument x:TypeArguments="p5:ExtractorDocumentType">
+                            <DelegateArgumentValue x:TypeArguments="p5:ExtractorDocumentType">
+                              <DelegateInArgument x:TypeArguments="p5:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p4:FormExtractor.ExtractorDocumentType>
+                        <p4:FormExtractor.ExtractorResult>
+                          <OutArgument x:TypeArguments="p5:ExtractorResult">
+                            <DelegateArgumentReference x:TypeArguments="p5:ExtractorResult">
+                              <DelegateOutArgument x:TypeArguments="p5:ExtractorResult" Name="ExtractorResult" />
+                            </DelegateArgumentReference>
+                          </OutArgument>
+                        </p4:FormExtractor.ExtractorResult>
+                      </p4:FormExtractor>
+                    </p4:DataExtractionScope.Extractors>
+                  </p4:DataExtractionScope>
+                  <p:PresentValidationStation AutomaticExtractionResults="[dataextraction1]" DisplayName="Present Validation Station" DocumentObjectModel="[DOM1]" DocumentPath="[item.ToString]" DocumentText="[bin_text]" sap:VirtualizedContainerService.HintSize="478,365" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" Taxonomy="[taxo]" ValidatedExtractionResults="[validated_extr1]" />
+                  <p7:TrainClassifiersScope HumanValidatedClassificationData="{x:Null}" DisplayName="Train Classifiers Scope" DocumentObjectModel="[DOM1]" DocumentPath="[item.ToString]" DocumentText="[bin_text]" sap:VirtualizedContainerService.HintSize="478,364" HumanValidatedData="[validated_extr1]" sap2010:WorkflowViewState.IdRef="TrainClassifiersScope_1" Taxonomy="[taxo]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI5900e4dffd4f41d5ba567e861557fc8a&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NjtaAmazonScans.Invoice.Tolls&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.Tolls&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false},&quot;NjtaAmazonScans.Invoice.Njta_&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.Njta_&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false},&quot;NjtaAmazonScans.Invoice.njta&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NjtaAmazonScans.Invoice.njta&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI5900e4dffd4f41d5ba567e861557fc8a&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI5900e4dffd4f41d5ba567e861557fc8a&quot;:[]}}">
+                    <p7:TrainClassifiersScope.Trainables>
+                      <p7:KeywordBasedClassifierTrainer LearningData="{x:Null}" DisplayName="Keyword Based Classifier Trainer" sap:VirtualizedContainerService.HintSize="234,113" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifierTrainer_1" LearningFilePath="DocumentProcessing\keywordlearning1.json" PersistenceId="UI5900e4dffd4f41d5ba567e861557fc8a">
+                        <p7:KeywordBasedClassifierTrainer.DocumentObjectModel>
+                          <InArgument x:TypeArguments="p3:Document">
+                            <DelegateArgumentValue x:TypeArguments="p3:Document">
+                              <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p7:KeywordBasedClassifierTrainer.DocumentObjectModel>
+                        <p7:KeywordBasedClassifierTrainer.DocumentPath>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p7:KeywordBasedClassifierTrainer.DocumentPath>
+                        <p7:KeywordBasedClassifierTrainer.DocumentText>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p7:KeywordBasedClassifierTrainer.DocumentText>
+                        <p7:KeywordBasedClassifierTrainer.HumanValidatedData>
+                          <InArgument x:TypeArguments="p6:ExtractionResult[]">
+                            <DelegateArgumentValue x:TypeArguments="p6:ExtractionResult[]">
+                              <DelegateInArgument x:TypeArguments="p6:ExtractionResult[]" Name="HumanValidatedData" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p7:KeywordBasedClassifierTrainer.HumanValidatedData>
+                      </p7:KeywordBasedClassifierTrainer>
+                    </p7:TrainClassifiersScope.Trainables>
+                  </p7:TrainClassifiersScope>
+                  <p4:ExportExtractionResults DataSet="[confirmed_data1]" DisplayName="Export Extraction Results" ExtractionResult="[validated_extr1]" sap:VirtualizedContainerService.HintSize="478,173" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="False" />
+                  <ui:AppendRange DataTable="[confirmed_data1.Tables(3)]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="478,115" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="output3.xlsx" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;failed if&quot;]" />
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
